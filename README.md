@@ -16,7 +16,7 @@ Contacts can be edited and deleted as desired.
 
 ## Installation
 
-Install project by cloning repository the enter the project folder and:
+Install project by cloning repository, enter the project folder and:
 
 1.  Install package dependencies
 ```bash
