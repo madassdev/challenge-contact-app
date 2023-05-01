@@ -32,12 +32,14 @@ Install project by cloning repository the enter the project folder and:
   npm run build
 ```
 4. Run migrations and seeder (Please setup db config in env)
-
-  ```bash
+```bash
   php artisan migrate:fresh --seed
-  ```
-4. Serve application (or use local server)
-
-  ```bash
+```
+5. Link storage (for stored images)
+```bash
+  php artisan storage:link
+```
+6. Serve application (or use local server)
+```bash
   php artisan serve
-  ```
+```
