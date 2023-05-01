@@ -25,7 +25,7 @@ Install project by cloning repository, enter the project folder and:
 2.  Install npm packages 
 
 ```bash
-  npm run
+  npm install
 ```
 3. Build the frontend with:
 ```bash
