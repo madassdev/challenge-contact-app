@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +15,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        // Create two users: main user and developer
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // User
+        User::create([
+            'name' => "User",
+            'email' => "user@contactapp.test",
+            'password' => bcrypt('UserPassword')
+        ]);
+        // Developer
+        User::create([
+            'name' => "Developer",
+            'email' => "dev@contactapp.test",
+            'password' => bcrypt('DevPassword')
+        ]);
+
+        // Create categories (e.g. personal, work, family, etc.)
+        $categories = collect(['personal',  'work',  'family'])->each(function($category){
+            Category::create([
+                "title" => $category,
+            ]);
+        });
+
     }
 }
